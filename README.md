@@ -216,3 +216,8 @@ Conclusions:
 
 - Discontiguous operation can be improved a lot by using OpenMP optimization.
 - OpenMP threshold of discontiguous tensor is usually lower than that of contiguous tensor because the same operation of discontiguous tensor is more time-consuming than contiguous tensor. 
+
+#### 4.3 LSTM benchmark test
+To consolidate the performance boost benefiting from the elementwise optimization, we choose the a widely-used RNN unit: LSTM as the model-level benchmark reference. This is because:
+1. LSTM related computations involve considerable elementwise operations;
+2. PyTorch provides a scalable and flexible Python API to execute LSTM computation.
