@@ -234,5 +234,6 @@ We retrieve the LSTM benchmark via the script:  https://github.com/xhzhao/pytorc
 Specifically, 
 The [64, 50, 500, 500] is used by OpenNMT. The [64, 25, 4096, 4096] is used by Deepbench.
 
+Test results analysis:
 1. For inference benchmarks: As the contributions of elementwise operation varies from the different input shapes,  it is expected the performance boosts are not uniform with input shape changing. 
 2. For training benchmarks: Apart from sharing the same reason of inference benchmarks. As the backward computation gains less from the elementwise optimization, it is expected the performance boosts on training benchmarks are not outstanding as inference benchmarks, and not uniform with input shape changing.
